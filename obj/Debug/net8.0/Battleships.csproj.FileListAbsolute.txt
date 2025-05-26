@@ -100,3 +100,4 @@ c:\Users\ethan\projects\Battleships\bin\Debug\net8.0\runtimes\win\lib\net6.0\Sys
 c:\Users\ethan\projects\Battleships\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
 c:\Users\ethan\projects\Battleships\obj\Debug\net8.0\Battleships.csproj.AssemblyReference.cache
 c:\Users\ethan\projects\Battleships\obj\Debug\net8.0\Battlesh.B7114EF4.Up2Date
+C:\Users\ethan\projects\Battleships\obj\Debug\net8.0\Battleships.sourcelink.json

@@ -6,8 +6,8 @@ public static class GameUtilities
     public static (int, int) ConvertToCoordinates(string input)
     {
         char letter = input[0];
-        int x = (int)letter - 'A';
-        int y = input[1] - 48;
+        int x = (int)letter - 'A'; //Convert char value for a Letter to a number
+        int y = input[1] - 48; //Convert char value for a number to number
         return (x, y);
     }
     public static bool IsValidCoordinate(string input, int boardWidth, int boardHeight)

@@ -12,6 +12,11 @@ public class Board : IBoard
         Height = height;
         Width = width;
     }
+    /// <summary>
+    /// Adds a ship to the board at a random location and checks if the location is valid (not overlapping another ship or will go over the board)
+    /// </summary>
+    /// <param name="newShip"></param>
+    /// <returns></returns>
     public bool AddShip(IShip newShip)
     {
         int startX;
@@ -23,7 +28,7 @@ public class Board : IBoard
 
         if (randomOrientation == 0) // Horizontal
         {
-            startX = randomCoordinate.Next(0, Width - newShip.Size); // Ensures the ship fits
+            startX = randomCoordinate.Next(0, Width - newShip.Size); // Ensures the ship fits on the board
             startY = randomCoordinate.Next(0, Height);
         }
         else //vertical
@@ -44,7 +49,7 @@ public class Board : IBoard
             }
         }
 
-        if (IsOccupied(newShip.ShipCoordinates, Ships))
+        if (IsOccupied(newShip.ShipCoordinates, Ships)) // check if there is an overlap with another ship
         {
             return false;
         }
@@ -54,10 +59,15 @@ public class Board : IBoard
             return true;
         }
     }
-
+    /// <summary>
+    /// Checks if any coordinates in a set of coordinates for a new ship are already in use on the board by another ship
+    /// </summary>
+    /// <param name="newShipCoords"></param>
+    /// <param name="existingShips"></param>
+    /// <returns></returns>
     public bool IsOccupied(List<(int X, int Y)> newShipCoords, List<IShip> existingShips)
     {
-        foreach (var ship in existingShips)
+        foreach (IShip ship in existingShips)
         {
             if (ship.ShipCoordinates.Intersect(newShipCoords).Any())
             {
@@ -77,7 +87,7 @@ public class Board : IBoard
         for (int y = 0; y < Height; y++)
         {
             Console.WriteLine("");
-            Console.Write(y); //This is lables Y axis
+            Console.Write(y); //This lables Y axis
             for (int x = 0; x < Width; x++)
             {
                 if (HitCoordinates.Contains((x, y)))
