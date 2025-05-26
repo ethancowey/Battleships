@@ -20,7 +20,7 @@ Run 'Program.cs' to start the project which will iniate the board and call the G
 
 ## Unit Tests
 
-Can be found in the folder UnitTest
+Can be found in the folder UnitTest, these will run on commit as part of a pipeline.
 
 Running the test file will require the package Xunit
 
