@@ -21,6 +21,7 @@ Run 'Program.cs' to start the project which will iniate the board and call the G
 ## Unit Tests
 
 Can be found in the folder UnitTest
+
 Running the test file will require the package Xunit
 
-The unit tests set up a mock version of the game with a boat in a prredefined location. Then various inputs are tested to see if it would miss, hit, already fired in that location or is an invalid location to be fired at.
+The unit tests set up a mock version of the game with a boat in a predefined location. Then various inputs are tested to see if it would miss, hit, already fired in that location or is an invalid location to be fired at.
