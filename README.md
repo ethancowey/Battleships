@@ -1,7 +1,9 @@
 # Battleships
 
 | Aurthor    | Ethan Cowey |
+| -- | --|
 | Time Spent | 5 hours     |
+| Technologies | c#, Xunit |
 
 ## Future Developments
 
